@@ -1,0 +1,65 @@
+<!-- <div class="d-flex justify-content-between" style="height:20%">
+  <div style="margin-left:3%;border-width:10%;border-color: chartreuse;"><i class='fa fa-user-circle'></i></div>
+  
+  <i class="fa fa-plus"style="margin-right:3%"></i>
+</div> -->
+<div class="d-flex justify-content-between" style="margin:4%;">
+  <img style="width:10%;height:5%;" src="assets/userprofile-removebg-preview.png">
+  <h2 class="page-title" >Product Page</h2>
+  <img style="width:10%;height:5%;" src="assets/plusAdd.png">
+</div>
+
+
+<div style="margin:5%">
+<div  (click)="salespage(salesperson.name)" class="salespeople-container cardAnimation" *ngFor="let salesperson of salespeople">
+    <div  class="row"  style="margin:2%">
+        <div style="width:80%">
+          <h3 class="salesperson-name">{{salesperson.name}}</h3>
+          <!-- circle row icon -->
+          <div style="margin-right:10%;" class="">
+              <div id="grid_groups_wrapper" class="">
+                <tbody>
+                    <tr role="row group" class="odd">
+                    <a class="route d-flex">
+                          <div title="Baby Yoda" class="rounded-circle default-avatar member-overlap-item" 
+                              style="background: url(assets/boy.png) 0 0 no-repeat; background-size: cover;background-color: #ea6837">
+                          </div>
+                          <div title="R2D2" class="rounded-circle default-avatar member-overlap-item"
+                              style="background: url(assets/girl.png) 0 0 no-repeat; background-size: cover;background-color: #ea6837">
+                          </div>
+                          <div title="Jabba the Hut" class="rounded-circle default-avatar member-overlap-item"
+                              style="background: url(assets/boynew.png) 0 0 no-repeat; background-size: cover;background-color: #ea6837">
+                          </div>
+                          <div title="Chewbacca" class="rounded-circle default-avatar member-overlap-item"
+                              style="background: url(assets/girlnew.png) 0 0 no-repeat; background-size: cover;background-color: #ea6837">
+                          </div>
+                          <div title="C-3PO" class="rounded-circle default-avatar member-overlap-item"
+                              style="background: url(assets/1plus.png) 0 0 no-repeat; background-size: cover;background-color: #ea6837">
+                          </div>
+                          
+                    </a>
+                    </tr>
+                </tbody>
+              </div>
+          </div>
+        </div>
+        <!-- <p>{{salesperson.description}}</p> -->
+        <!-- <button class="table-toggle-btn" >View Sales Team</button> -->
+        <table class="customer-table" *ngIf="salesperson.tableVisible">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Address</th>
+              <th>Phone Number</th>
+              <th>Request</th>
+            </tr>
+          </thead>
+          <tbody>
+            
+          </tbody>
+        </table>
+        <img  style="width:20%;height:25%;margin-top:5%;" 
+            [src]='salesperson.image' alt="Flowers in Chania">
+            <i class="bi bi-0-square-fill"></i>
+    </div>
+</div>

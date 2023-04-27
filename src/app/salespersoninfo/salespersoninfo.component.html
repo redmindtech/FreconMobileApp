@@ -1,0 +1,51 @@
+<div class="container">
+  <!-- <img style="width:10%;border-radius:60%;margin-top: 3%;margin-left: 90%;" 
+      src="assets/back-removebg-preview.png" alt="Flowers in Chania"> -->
+    <h2 class="page-title" style="padding-top:8%">Call records</h2>
+</div>
+
+<div class="d-flex align-content-center justify-content-center">
+<img style="width:28%;border-radius:60%;margin-left:0%;background-color: #ea6837" 
+      src="assets/boy.png" alt="Flowers in Chania">
+</div>
+
+
+<h4 style="padding-top:0.5%;text-align: center;">{{salespersonName}}</h4>
+<h4 style="padding-top:3%;text-align: center;">{{productname}}</h4>
+<div class="d-flex align-content-center justify-content-center">
+    <button type="button" class="btn btn-primary"><b>Edit Profile</b></button>
+</div>
+
+
+
+<div class="salespeople-container" (click)="showmore(salesperson.id)" *ngFor="let salesperson of customerinfo" style="width:auto;margin:3%">
+
+    <div class="row">
+        
+        <div class="col">
+          <h3>{{salesperson.name}}</h3>
+          <h5>{{salesperson.phone}}</h5>
+          <div *ngIf="salesperson.showmorebool">
+          <h5>Address:  {{salesperson.address}}</h5>
+          <h5>Request:  {{salesperson.request}}</h5>
+          <h5>Status:  {{salesperson.status}}</h5>
+          <h5 class="row" style="gap: 5%;margin-left:1%">Comments:{{salesperson.comments}}<input class="form-control" style="width:50%"></h5>
+          
+
+          </div>
+          
+    
+    
+          <div style="margin-bottom:0%">
+            
+          </div>
+        </div>
+        
+      </div>
+
+
+
+
+
+
+</div>
