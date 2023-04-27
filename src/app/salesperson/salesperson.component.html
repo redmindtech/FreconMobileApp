@@ -1,0 +1,74 @@
+<div class="container">
+  <!-- <img style="width:10%;border-radius:60%;margin-top: 3%;margin-left: 90%;" 
+      src="assets/back-removebg-preview.png" alt="Flowers in Chania"> -->
+<h2 class="page-title" style="padding-top:2%">{{productName}}</h2>
+<h2 class="page-title" style="padding-top:1%">Sales team</h2>
+
+<div class="salespeople-container" (click)="salespersoninfo(salesperson.name,productName)" *ngFor="let salesperson of salespeople" style="width:auto">
+  <div class="row">
+    <img style="width:28%;border-radius:60%;margin-left:10%;background-color: #ea6837" 
+      [src]="salesperson.image" alt="Flowers in Chania">
+    <div class="col">
+      <h3 class="salesperson-name">{{salesperson.name}}</h3>
+      <h5>{{salesperson.designation}}</h5>
+      
+
+
+      <!-- <div style="margin-bottom:3%">
+        <button class="table-toggle-btn" (click)="toggleTable(salesperson.id)">View Table</button>
+      </div> -->
+    </div>
+    
+  </div>
+  
+  <div class="table-responsive">
+    <table class="table table-striped" *ngIf="salesperson.tableVisible">
+      <thead style="height:auto">
+        <tr>
+          <th scope="col">Name</th>
+          <th scope="col">Address</th>
+          <th scope="col" nowrap>Phone Number</th>
+          <th scope="col" >Request</th>
+          <th scope="col">Status</th>
+          <th scope="col">Comments</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let customer of salesperson.customers">
+          <td>{{customer.name}}</td>
+          <td>{{customer.address}}</td>
+          <td>{{customer.phone}}</td>
+          <td>{{customer.request}}</td>
+          <td>{{customer.status}}</td>
+          <td (click)="Viewpopup(customer)"><a href="" data-toggle="modal" data-target="#myModal">Click to view</a></td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+   
+   <div class="modal" id="myModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4>Comments</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+          {{popupComments}}...
+        </div>
+        
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        </div>
+        
+      </div>
+    </div>
+    </div>
+</div>
+</div>

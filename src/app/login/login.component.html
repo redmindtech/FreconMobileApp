@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sales Call Management App</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./../../styles.css">
+  </head>
+  <body>
+    <div class="container">
+      <img style="width:24%;border-radius:60%;margin-top:30%;margin-left:38%;" 
+      src="assets/newlogo.png" alt="Flowers in Chania">
+      <!-- Login Page -->
+      <div class="row justify-content-center" style="padding-top: 6%;">
+        <div class="col-md-6">
+          <form class="login-form" >
+            <h2 style="margin-left: 35%;">Login</h2>
+            <div class="form-group">
+              <label for="username">Username</label>
+              <input type="text" id="username" class="form-control" name="username"required [(ngModel)]="username">
+            </div>
+            <div class="form-group">
+              <label for="password">Password</label>
+              <input type="password" id="password" class="form-control" name="password" required [(ngModel)]="password">
+            </div>
+            <button type="submit" class="btn btn-primary" (click)="login()">Login</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min"></script>
