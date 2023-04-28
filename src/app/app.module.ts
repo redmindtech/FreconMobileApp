@@ -9,6 +9,8 @@ import { FormsModule } from '@angular/forms';
 import { ProductComponent } from './product/product.component';
 import { SalespersoninfoComponent } from './salespersoninfo/salespersoninfo.component';
 
+import { DataTablesModule } from 'angular-datatables';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,7 +22,8 @@ import { SalespersoninfoComponent } from './salespersoninfo/salespersoninfo.comp
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    DataTablesModule
   ],
   providers: [],
   bootstrap: [AppComponent]

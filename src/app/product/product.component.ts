@@ -50,10 +50,16 @@ export class ProductComponent implements OnInit {
       image:'assets/delivery new.png'
     }
   ];
+  customers:any=[{name:'cust1'},
+  {name:'cust2'},
+  {name:'cust3'},
+  {name:'cust4'},
+  {name:'cust5'},];
 
   constructor(public router:Router,
     public service:AppserviceService) { }
 
+  dtOptions: DataTables.Settings = {};
   ngOnInit(): void {
     $(document).ready(() => {
       // Bounce button
@@ -67,6 +73,10 @@ export class ProductComponent implements OnInit {
         }
       });
     });
+
+    this.dtOptions = {
+      pagingType: 'full_numbers'
+    };
   }
 
   
