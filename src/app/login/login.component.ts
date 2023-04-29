@@ -19,7 +19,7 @@ export class LoginComponent implements OnInit {
     // Submit login request to server
     console.log(this.username);
     if (this.username=="admin" && this.password=="admin") {
-      this.router.navigate(['/product']);
+      this.router.navigate(['/menu']);
     }
   }
 }

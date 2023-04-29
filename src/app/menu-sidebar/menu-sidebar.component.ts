@@ -14,26 +14,31 @@ export class MenuSidebarComponent implements OnInit {
       displayName: 'Dashboard',
       //iconName: 'desktop_windows',
       //route: 'escritorio',
+      menuName:''
     },
     {
-      displayName: 'Menu -1',
+      displayName: 'Create Product / Service',
       //iconName: 'desktop_windows',
       //route: 'escritorio',
+      menuName:'Menu -1'
     },
     {
-      displayName: 'Menu -2',
+      displayName: 'Sales Person Details',
       //iconName: 'ballot',
       //route: 'entradasGADE',
+      menuName:'Menu -2'
     },
     {
-      displayName: 'Menu -3',
+      displayName: 'Customer Details',
       //iconName: 'ballot',
       //route: 'entradasGADE',
+      menuName:'Menu -3'
     },
     {
-      displayName: 'Menu -4',
+      displayName: 'Call Logs Details',
       //iconName: 'ballot',
      // route: 'entradasGADE',
+     menuName:'Menu -4'
     }
   ];
   mobileQuery: MediaQueryList;
@@ -54,7 +59,21 @@ export class MenuSidebarComponent implements OnInit {
   menu4:boolean=false;
 
   menuSelect(a:any){
-    console.log(a);
+    //console.log(a);
+    if(a=='Menu -1' || a=='Menu -2'){
+      if(a=='Menu -1'){
+        this.menu1=true;
+        this.menu2=false;
+      }
+      else{
+        this.menu2=true;
+        this.menu1=false;
+      }
+      this.dashboard=false;
+      this.menu3=false;
+      this.menu4=false;
+    }
+    
   }
 
 }

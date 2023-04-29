@@ -12,7 +12,7 @@
     position: fixed;
     /* Make sure the toolbar will stay on top of the content as it scrolls past. */
     z-index: 2;
-    background-color: #ff2323d4;
+    background-color: #ff2323;
   }
   
   h1.example-app-name {
@@ -34,3 +34,4 @@
   table {
     width: 100%;
   }
+  

@@ -74,65 +74,7 @@ body {
     margin-bottom: 10px;
   }
   
-  .table-toggle-btn {
-    background-color: #007bff;
-    border: none;
-    border-radius: 5px;
-    color: #fff;
-    cursor: pointer;
-    font-size: 16px;
-    font-weight: bold;
-    padding: 10px 15px;
-    margin-right: 10px;
-    transition: background-color 0.3s ease;
-  }
-  
-  .table-toggle-btn:hover {
-    background-color: #0069d9;
-  }
-  
-  .customer-table {
-    border-collapse: collapse;
-    width: 100%;
-    margin-top: 10px;
-    table-layout: fixed;
-    
-  }
-  
-  .customer-table th {
-    background-color: #007bff;
-    color: #fff;
-    font-weight: bold;
-    padding: 10px;
-    text-align: left;
-  }
-  
-  .customer-table td {
-    border: 1px solid #dee2e6;
-    padding: 10px;
-  }
-  
-  .customer-table tr:nth-child(even) {
-    background-color: #f2f2f2;
-  }
-  
-  .customer-table tr:hover {
-    background-color: #ddd;
-  }
 
-  th{
-    background-color: #1F51FF;
-    text-align: center;
-}
-td{
-    background-color: rgb(247, 240, 240);
-    text-align: left;
-}
-  
-
-tbody tr:nth-child(even){
-  background-color: #300404;
-}
 
 
 #grid_groups_wrapper {

@@ -14,6 +14,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MenuSidebarComponent } from './menu-sidebar/menu-sidebar.component';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MaterialModule } from './material.module';
+import { ProductServiceTableComponent } from './product-service-table/product-service-table.component';
+import { SalesPersonTableComponent } from './sales-person-table/sales-person-table.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { MaterialModule } from './material.module';
     SalespersonComponent,
     ProductComponent,
     SalespersoninfoComponent,
-    MenuSidebarComponent
+    MenuSidebarComponent,
+    ProductServiceTableComponent,
+    SalesPersonTableComponent
   ],
   imports: [
     BrowserModule,
