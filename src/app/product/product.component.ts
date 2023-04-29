@@ -1,7 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AppserviceService } from '../appservice.service';
 declare var $: any;
+import {MatTableDataSource} from '@angular/material/table';
+import {SelectionModel} from '@angular/cdk/collections';
+import { MediaMatcher } from '@angular/cdk/layout';
 
 
 interface Product {
@@ -57,7 +60,7 @@ export class ProductComponent implements OnInit {
   {name:'cust5'},];
 
   constructor(public router:Router,
-    public service:AppserviceService) { }
+    public service:AppserviceService) {}
 
   dtOptions: DataTables.Settings = {};
   ngOnInit(): void {
@@ -88,16 +91,6 @@ export class ProductComponent implements OnInit {
       //console.log(product);
       this.service.productname=product1;
     }, 500);
-     
-    
-  }
-  
-  
-  
-  
-  
-  
-  
-  
+}
 
 }

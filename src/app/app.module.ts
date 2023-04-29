@@ -10,6 +10,10 @@ import { ProductComponent } from './product/product.component';
 import { SalespersoninfoComponent } from './salespersoninfo/salespersoninfo.component';
 
 import { DataTablesModule } from 'angular-datatables';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MenuSidebarComponent } from './menu-sidebar/menu-sidebar.component';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { MaterialModule } from './material.module';
 
 @NgModule({
   declarations: [
@@ -17,13 +21,18 @@ import { DataTablesModule } from 'angular-datatables';
     LoginComponent,
     SalespersonComponent,
     ProductComponent,
-    SalespersoninfoComponent
+    SalespersoninfoComponent,
+    MenuSidebarComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    DataTablesModule
+    DataTablesModule,
+    BrowserAnimationsModule,
+    MatSlideToggleModule,
+    MaterialModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
