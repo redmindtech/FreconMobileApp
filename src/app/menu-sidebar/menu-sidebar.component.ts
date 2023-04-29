@@ -17,28 +17,22 @@ export class MenuSidebarComponent implements OnInit {
       menuName:''
     },
     {
-      displayName: 'Create Product / Service',
-      //iconName: 'desktop_windows',
-      //route: 'escritorio',
-      menuName:'Menu -1'
-    },
-    {
       displayName: 'Sales Person Details',
       //iconName: 'ballot',
       //route: 'entradasGADE',
-      menuName:'Menu -2'
+      menuName:'Menu -1'
     },
     {
       displayName: 'Customer Details',
       //iconName: 'ballot',
       //route: 'entradasGADE',
-      menuName:'Menu -3'
+      menuName:'Menu -2'
     },
     {
       displayName: 'Call Logs Details',
       //iconName: 'ballot',
      // route: 'entradasGADE',
-     menuName:'Menu -4'
+     menuName:'Menu -3'
     }
   ];
   mobileQuery: MediaQueryList;
