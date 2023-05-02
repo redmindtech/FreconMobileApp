@@ -83,7 +83,7 @@ export class MenuSidebarComponent implements OnInit {
   }
 
 //Dropdown
-  options = ['Customer - 1', 'Customer - 2', 'Customer - 3'];
+  options = ['Gilbert', 'Jorge', 'Dan','Ivan'];
   selectedValue = 'SELECT';
 
   selectOption(option: string) {
