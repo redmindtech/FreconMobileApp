@@ -1,10 +1,10 @@
 <div class="container">
   <!-- <img style="width:10%;border-radius:60%;margin-top: 3%;margin-left: 90%;" 
       src="assets/back-removebg-preview.png" alt="Flowers in Chania"> -->
-<h2 class="page-title" style="padding-top:2%">{{productName}}</h2>
+
 <h2 class="page-title" style="padding-top:1%">Sales team</h2>
 
-<div class="salespeople-container" (click)="salespersoninfo(salesperson.name,productName)" *ngFor="let salesperson of salespeople" style="width:auto">
+<div class="salespeople-container"  *ngFor="let salesperson of salespeople" style="width:auto">
   <div class="row">
     <img style="width:28%;border-radius:60%;margin-left:10%;background-color: #ea6837" 
       [src]="salesperson.image" alt="Flowers in Chania">
