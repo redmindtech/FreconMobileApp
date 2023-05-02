@@ -29,6 +29,19 @@
       <mat-sidenav-content>
         <app-product-service-table *ngIf="menu1"></app-product-service-table>
         <app-sales-person-table *ngIf="menu2"></app-sales-person-table>
+        <div *ngIf="menu3" class="d-flex align-content-center justify-content-center">
+          <div class="dropdown" style="margin-top: 3%;">
+            <div><h2>Select Customer From Below</h2></div>
+            <div style="margin-left:30%;">
+              <button class="btn btn-secondary dropdown-toggle" type="button"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                {{ selectedValue }}
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" *ngFor="let option of options" (click)="selectOption(option)">{{ option }}</a>
+              </div>
+            </div>
+          </div>
+        </div>
       </mat-sidenav-content>
   
     </mat-sidenav-container>

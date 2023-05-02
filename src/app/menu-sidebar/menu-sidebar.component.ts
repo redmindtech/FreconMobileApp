@@ -1,6 +1,6 @@
 import {SelectionModel} from '@angular/cdk/collections';
 import {MediaMatcher} from '@angular/cdk/layout';
-import {ChangeDetectorRef, Component, OnDestroy, OnInit} from '@angular/core';
+import {ChangeDetectorRef, Component, ElementRef, OnDestroy, OnInit, ViewChild} from '@angular/core';
 import {MatTableDataSource} from '@angular/material/table';
 
 @Component({
@@ -67,8 +67,28 @@ export class MenuSidebarComponent implements OnInit {
       this.menu3=false;
       this.menu4=false;
     }
+    if(a=='Menu -3' || a=='Menu -4'){
+      if(a=='Menu -3'){
+        this.menu3=true;
+        this.menu4=false;
+      }
+      else{
+        this.menu4=true;
+        this.menu4=false;
+      }
+      this.menu1=false;
+      this.menu2=false;
+    }
     
   }
 
+//Dropdown
+  options = ['Customer - 1', 'Customer - 2', 'Customer - 3'];
+  selectedValue = 'SELECT';
+
+  selectOption(option: string) {
+    this.selectedValue = option;
+    console.log(option);
+  }
 }
 
