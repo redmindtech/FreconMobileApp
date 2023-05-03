@@ -43,63 +43,26 @@ export class DashboardComponent implements OnInit {
 
 
     this.chartOptions = {
-      series: [
-        {
-          name: "called",
-          data: [44, 55, 41, 67]
-        },
-        {
-          name: "pending",
-          data: [13, 23, 20, 8]
-        },
-      ],
+      series: [{
+        name: "Desktops",
+        data: [10, 41, 35, 51]
+    }],
       chart: {
-        type: "bar",
-        height: 350,
-        stacked: true,
-        toolbar: {
-          show: true
-        },
-        zoom: {
-          enabled: true
-        }
-      },
-      responsive: [
-        {
-          breakpoint: 480,
-          options: {
-            legend: {
-              position: "bottom",
-              offsetX: -10,
-              offsetY: 0
-            }
-          }
-        }
-      ],
-      plotOptions: {
-        bar: {
-          horizontal: false
-        }
-      },
-      xaxis: {
-        labels: {
-          show: true
-        },
-        type: "category",
-        categories: [
-          "Freight",
-          "Logistics",
-          "LCL",
-          "Airplane",
-        ]
-      },
-      legend: {
-        position: "right",
-        offsetY: 40
-      },
-      fill: {
-        opacity: 1
+      height: 350,
+      type: 'line',
+      zoom: {
+        enabled: false
       }
+    },
+    dataLabels: {
+      enabled: false
+    },
+   
+   
+    
+    xaxis: {
+      categories: ['Fright', 'Logistics', 'LCL', 'Airplane'],
+    }
     };
 
 
