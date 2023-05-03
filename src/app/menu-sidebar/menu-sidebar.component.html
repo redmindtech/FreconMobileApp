@@ -27,7 +27,7 @@
       </mat-sidenav>
 
       <mat-sidenav-content>
-        
+        <app-dashboard *ngIf="Dashboard"></app-dashboard>        
         <app-product-service-table *ngIf="menu1"></app-product-service-table>
         <app-sales-person-table *ngIf="menu2"></app-sales-person-table>
         <div *ngIf="menu3" class="d-flex align-content-center justify-content-center">

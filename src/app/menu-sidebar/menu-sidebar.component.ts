@@ -14,7 +14,7 @@ export class MenuSidebarComponent implements OnInit {
       displayName: 'Dashboard',
       //iconName: 'desktop_windows',
       //route: 'escritorio',
-      menuName:''
+      menuName:'dashboard'
     },
     {
       displayName: 'Sales Person Details',
@@ -46,7 +46,7 @@ export class MenuSidebarComponent implements OnInit {
   }
   ngOnInit(): void {}
 
-  dashboard:boolean=true;
+  Dashboard:boolean=true;
   menu1:boolean=false;
   menu2:boolean=false;
   menu3:boolean=false;
@@ -63,18 +63,18 @@ export class MenuSidebarComponent implements OnInit {
         this.menu2=true;
         this.menu1=false;
       }
-      this.dashboard=false;
+      this.Dashboard=false;
       this.menu3=false;
       this.menu4=false;
     }
-    if(a=='Menu -3' || a=='Menu -4'){
+    if(a=='Menu -3' || a=='dashboard'){
       if(a=='Menu -3'){
         this.menu3=true;
-        this.menu4=false;
+        this.Dashboard=false;
       }
       else{
-        this.menu4=true;
-        this.menu4=false;
+        this.Dashboard=true;
+        this.menu3=false;
       }
       this.menu1=false;
       this.menu2=false;
