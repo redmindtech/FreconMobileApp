@@ -17,6 +17,10 @@ import { MaterialModule } from './material.module';
 import { ProductServiceTableComponent } from './product-service-table/product-service-table.component';
 import { SalesPersonTableComponent } from './sales-person-table/sales-person-table.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { NgApexchartsModule } from 'ng-apexcharts';
+
+
+
 
 @NgModule({
   declarations: [
@@ -37,7 +41,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     DataTablesModule,
     BrowserAnimationsModule,
     MatSlideToggleModule,
-    MaterialModule
+    MaterialModule,
+    NgApexchartsModule,
     
   ],
   providers: [],
